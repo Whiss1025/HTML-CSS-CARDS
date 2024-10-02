@@ -1,0 +1,198 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background:black;
+}
+
+.header{
+  background-color: #405D72;
+  width: 100%;
+  position: fixed;
+  padding: 15px;
+  height: 20%;
+  color: white;
+  text-align: center;
+  top: 0;
+  
+  }
+
+.footer{
+  background-color: #405D72;
+  padding: 15px;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  display: flex;
+  font-family: Lucida Console;
+}
+
+h4{
+  width: 100%;
+  margin: 0 10px 0 10px;
+  text-align: center;
+  opacity: 0.7;
+  color: white;
+}
+
+.cont{
+  text-align: center;
+  margin-top: -65px;
+}
+
+.text-header{
+  font-size: 50px;
+  margin-top: -85px;
+  color: darkred;
+ 
+}
+.container{
+  display: flex;
+  margin-top: 500px;
+  gap: 120px;
+  
+}
+.card {
+  width: 140px;
+  height: 190px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 0 36px;
+  perspective: 2500px;
+  margin: 0 50px;
+}
+
+.cover-image {
+  width: 300px;
+  height: 500px;
+  object-fit: cover;
+}
+
+.wrapper {
+  transition: all 0.25s;
+  position: absolute;
+  width: 300px;
+  z-index: -1;
+}
+
+.card:hover .wrapper{
+  transform: perspective(1000px) translateY(-5%) rotateX(10deg) translateZ(0);
+  box-shadow: rgba(236, 2, 2, 0.932) 0px 22px 70px 4px;
+}
+
+.wrapper::before,
+.wrapper::after {
+  content: "";
+  opacity: 0;
+  width: 300px;
+  height: 450px;
+  transition: all 0.25s;
+  position: absolute;
+  left: 0;
+}
+
+.wrapper::before {
+  top: 0;
+  height: 90%;
+  background-image: linear-gradient(
+    to top,
+    transparent 46%,
+   rgba(12, 13, 19, 0.5) 68%,
+    rgba(12, 13, 19) 97%
+   
+  );
+}
+.wrapper::after {
+  bottom: 0;
+  opacity: 1;
+  background-image: linear-gradient(
+    to bottom,
+    transparent 46%,
+    rgba(12, 13, 19, 0.5) 68%,
+    rgba(12, 13, 19) 97%
+  );
+}
+
+.card:hover .wrapper::before,
+.wrapper::after {
+  opacity: 1;
+}
+
+.card:hover .wrapper::after {
+  height: 120px;
+}
+
+.character-luffy{
+  width: 300px;
+  opacity: 0;
+  transition: all 0.25s;
+  position: absolute;
+  z-index: -1;
+  margin-left: 40px;
+}
+
+.character-shanks{
+  width: 300px;
+  opacity: 0;
+  transition: all 0.25s;
+  position: absolute;
+  z-index: -1;
+  margin-left: 10px;
+}
+
+.character-teach{
+  width: 300px;
+  opacity: 0;
+  transition: all 0.25s;
+  position: absolute;
+  z-index: -1;
+  margin-left: 10px;
+}
+
+.card:hover .character-teach {
+  opacity: 1;
+  transform: translate3d(0%, -30%, 400px);
+}
+
+.card:hover .character-shanks {
+  opacity: 1;
+  transform: translate3d(0%, -30%, 100px);
+}
+
+.card:hover .character-luffy{
+  opacity: 1;
+  transform: translate3d(0%, -30%, 100px);
+}
+
+.info{
+  width: 100%;
+  transition: transform 0.25s;
+  font-weight: bold;
+  color: red;
+  opacity: 0;
+  text-align: center;
+  font-size: 17px;
+  
+}
+
+.card:hover .info {
+  transform: translate3d(0%, -20px, 100px);
+  opacity: 1;
+}
+
+
+.left-align{
+  text-align: left;
+  margin-top: 10px;
+}
+
+.right-align{
+  text-align: right;
+  margin-top: 10px;
+}
+
